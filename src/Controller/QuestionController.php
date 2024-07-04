@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Service\MarkdownHelper;
+use Sentry\State\HubInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -31,7 +32,6 @@ class QuestionController extends AbstractController
      */
     public function show($slug, MarkdownHelper $markdownHelper)
     {
-        throw new \Exception('bad stuff happened');
         $answers = [
             'Make sure your cat is sitting purrrfectly still 🤣',
             'Honestly, I like furry shoes better than MY cat',
